@@ -29,12 +29,13 @@ const Hero = () => {
           <p>A passionate and creative developer with a knack for building beautiful and functional web applications.</p>
           <div className="hero-buttons">
             <a href="#projects" className="btn">View My Work</a>
-            <a href="/resume.pdf" download className="btn btn-outline">Download Resume</a>
+            <a href="/resume.pdf.pdf" download className="btn btn-outline">Download Resume</a>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
 
 export default Hero;
