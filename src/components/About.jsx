@@ -19,7 +19,7 @@ const About = () => {
                 <h4>B.Tech in Computer Science and Engineering</h4>
                 <p>Sree Dattha Institute of Engineering and Science</p>
                 <p>2023 - 2027</p>
-                <p>CGPA: 8.46</p>
+                <p>CGPA: 8.4</p>
               </div>
             </div>
           </div>
