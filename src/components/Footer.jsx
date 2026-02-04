@@ -22,7 +22,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <p className="copyright">© 2023 Pasham Shivanagu Reddy. All rights reserved.</p>
+        <p className="copyright">Developed with ❤️ by Pasham Shivanagu Reddy.</p>
       </div>
     </footer>
   );
