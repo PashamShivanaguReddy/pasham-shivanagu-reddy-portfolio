@@ -36,15 +36,15 @@ const Skills = () => {
       const duration = 2000; // ms
       const steps = 60;
       const incrementHackathons = 2 / steps;
-      const incrementLeetcode = 120 / steps;
-      const incrementProjects = 4 / steps;
+      const incrementLeetcode = 250 / steps;
+      const incrementProjects = 5 / steps;
       
       let currentStep = 0;
       const timer = setInterval(() => {
         currentStep += 1;
         setCounts({
           hackathons: Math.min(2, Math.round(incrementHackathons * currentStep)),
-          leetcode: Math.min(120, Math.round(incrementLeetcode * currentStep)),
+          leetcode: Math.min(250, Math.round(incrementLeetcode * currentStep)),
           projects: Math.min(4, Math.round(incrementProjects * currentStep))
         });
         
@@ -69,6 +69,16 @@ const Skills = () => {
       ]
     },
     {
+      category: "Backend",
+      items: [
+        { name: "Spring Boot", level: 70, icon: "fas fa-leaf" },
+        { name: "MySQL", level: 70, icon: "fas fa-database" },
+        { name: "MongoDB", level: 65, icon: "fas fa-envira" },
+        { name: "Restful APIs", level: 60, icon: "fas fa-network-wired" },
+      ]
+    },
+
+    {
       category: "Programming Languages",
       items: [
         { name: "JavaScript", level: 70, icon: "fab fa-node-js" },
@@ -84,8 +94,8 @@ const Skills = () => {
         { name: "Git", level: 75, icon: "fab fa-git-alt" },
         { name: "GitHub", level: 80, icon: "fab fa-github" },
         { name: "VS Code", level: 85, icon: "fas fa-code" },
-        
-        { name: "Photoshop", level: 60, icon: "fab fa-adobe" },
+        {name:"Postman", level:70, icon:"fas fa-rocket" },
+        {name:"Docker", level:60, icon:"fab fa-docker" }
        
       ]
     }
