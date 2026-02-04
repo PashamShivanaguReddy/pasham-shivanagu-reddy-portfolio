@@ -4,6 +4,24 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Smart Email Assistant",
+      year: "2025",
+      description: "Developed an AI-powered email assistant that categorizes, prioritizes, and drafts responses to emails using natural language processing techniques.",
+      technologies: ["Java","Spring Boot", "React.js"],
+      link: "https://github.com/PashamShivanaguReddy/Smart_Email_Assistant_BE",
+    },
+    {
+      id: 2,
+      title: "Banking Management System",
+      year: "2025",
+      description: "Developed a secure and scalable RESTful banking application using Java and Spring Boot with Spring Data JPA and MySQL, implementing layered architecture to manage user accounts, transactions, and balance operations.",
+
+      technologies: ["Java", "Spring Boot", "MySQL", "Spring Data JPA"],
+      link: "https://github.com/PashamShivanaguReddy/BankingApp",
+
+    },
+    {
+      id: 3,
       title: "Weather & AQI Prediction App",
       year: "2024-2025",
       description: "Built an interactive web application for predicting air quality index and weather using real-time data and ML models. Integrated data visualization for temperature, humidity, and pollution metrics.",
@@ -11,7 +29,7 @@ const Projects = () => {
       link: "#",
     },
     {
-      id: 2,
+      id: 4,
       title: "Portfolio Website",
       year: "2025",
       description: "Developed a personal portfolio site to showcase coding projects, technical skills, and achievements with a contact form. Implemented responsive design and dynamic user interface components.",
@@ -19,7 +37,7 @@ const Projects = () => {
       link: "#",
     },
     {
-      id: 3,
+      id: 5,
       title: "Weather App",
       year: "2025",
       description: "Developed a real-time weather app displaying temperature, humidity, and wind speed using API calls. Designed a user-friendly interface for quick weather lookups and location search.",
@@ -27,7 +45,7 @@ const Projects = () => {
       link: "https://wheather-app-vm1c.vercel.app/",
     },
     {
-      id: 4,
+      id: 6,
       title: "Calendar App",
       year: "2025",
       description: "Interactive calendar application with scheduling functionality and event management features.",
