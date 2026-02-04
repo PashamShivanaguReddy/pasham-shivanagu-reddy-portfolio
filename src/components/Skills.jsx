@@ -36,7 +36,7 @@ const Skills = () => {
       const duration = 2000; // ms
       const steps = 60;
       const incrementHackathons = 2 / steps;
-      const incrementLeetcode = 250 / steps;
+      const incrementLeetcode = 120 / steps;
       const incrementProjects = 5 / steps;
       
       let currentStep = 0;
@@ -44,7 +44,7 @@ const Skills = () => {
         currentStep += 1;
         setCounts({
           hackathons: Math.min(2, Math.round(incrementHackathons * currentStep)),
-          leetcode: Math.min(250, Math.round(incrementLeetcode * currentStep)),
+          leetcode: Math.min(120, Math.round(incrementLeetcode * currentStep)),
           projects: Math.min(4, Math.round(incrementProjects * currentStep))
         });
         
@@ -162,3 +162,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
