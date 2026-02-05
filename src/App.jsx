@@ -21,13 +21,7 @@ function App() {
     </div>
   );
 }
-<a
-  href="/resume.pdf"
-  download
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button>Download Resume</button>
-</a>
+
 
 export default App;
+
