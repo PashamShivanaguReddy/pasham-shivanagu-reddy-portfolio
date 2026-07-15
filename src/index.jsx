@@ -4,6 +4,10 @@ import App from './App';
 
 // Create stars background
 const createStars = () => {
+  if (document.querySelector('.stars')) {
+    return;
+  }
+
   const stars = document.createElement('div');
   stars.className = 'stars';
   
@@ -21,15 +25,7 @@ const createStars = () => {
   document.body.appendChild(stars);
 };
 
-// Create shimmering line
-const createShimmerLine = () => {
-  const shimmerLine = document.createElement('div');
-  shimmerLine.className = 'shimmer-line';
-  document.body.appendChild(shimmerLine);
-};
-
 createStars();
-createShimmerLine();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

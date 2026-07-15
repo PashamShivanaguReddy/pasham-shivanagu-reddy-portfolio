@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 const Contact = () => {
+  const contactEmail = 'shivapasham55@gmail.com';
+  const leetcodeUrl = 'https://leetcode.com/u/shivapasham55/';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,12 +18,10 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    const subject = `Portfolio inquiry from ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`;
+
+    window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -35,23 +35,41 @@ const Contact = () => {
               <i className="fas fa-phone"></i>
               <div>
                 <h3>Phone</h3>
-                <p>+91 7981487671</p>
+                <p>+91 7981487677</p>
               </div>
             </div>
             <div className="contact-item">
               <i className="fas fa-envelope"></i>
               <div>
                 <h3>Email</h3>
-                <p>shivapasham55@gmail.com</p>
+                <p>{contactEmail}</p>
               </div>
             </div>
             <div className="contact-item">
               <i className="fas fa-map-marker-alt"></i>
               <div>
                 <h3>Location</h3>
-                <p>Hyderabad, Telangana, India</p>
+                <p>Hyderabad, Telangana, 501510</p>
               </div>
             </div>
+            <a
+              className="contact-item contact-item-link"
+              href={leetcodeUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="contact-icon-image">
+                <img
+                  className="leetcode-logo"
+                  src="https://cdn.simpleicons.org/leetcode/F89F1B"
+                  alt="LeetCode"
+                />
+              </div>
+              <div>
+                <h3>LeetCode</h3>
+                <p>leetcode.com/u/shivapasham55/</p>
+              </div>
+            </a>
           </div>
           
           <form className="contact-form" onSubmit={handleSubmit}>

@@ -8,18 +8,36 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I'm Pasham Shivanagu Reddy, a CSE student at Sree Dattha Institute of Engineering and Science 
-              with a strong passion for technology and continuous learning. I'm interested in web development, 
-              Java, DSA, and problem-solving, and I enjoy applying these skills to build practical solutions.
+              Hi, I&apos;m <strong>Pasham Shivanagu Reddy</strong>, a final-year Computer Science Engineering student and an aspiring{' '}
+              <strong>Java Backend Developer</strong> with a passion for building scalable and efficient backend applications.
+            </p>
+
+            <p>
+              I have hands-on experience developing RESTful APIs and full-stack applications using{' '}
+              <strong>Java, Spring Boot, React.js, JavaScript, PostgreSQL, MongoDB, Docker, AWS, Git, and GitHub</strong>.
+              Through my internship, I worked on real-world software development, collaborated in an Agile environment, and gained
+              practical experience in writing clean, maintainable, and production-ready code.
+            </p>
+
+            <p>
+              Beyond academics, I&apos;m an <strong>active Open Source Contributor</strong>, contributing to real-world Java projects
+              by fixing issues and submitting pull requests. I have also solved <strong>300+ Data Structures &amp; Algorithms problems</strong>
+              and hold a <strong>1500+ LeetCode rating</strong>, strengthening my problem-solving and coding skills.
+            </p>
+
+            <p>
+              I&apos;m always eager to learn new technologies, contribute to impactful products, and grow as a software engineer by
+              building reliable, scalable, and user-focused applications.
+
             </p>
             
             <div className="education">
               <h3>Education</h3>
               <div className="education-item">
                 <h4>B.Tech in Computer Science and Engineering</h4>
-                <p>Sree Dattha Institute of Engineering and Science</p>
-                <p>2023 - 2027</p>
-                <p>CGPA: 8.4</p>
+                <p>Sree Dattha Institute of Engineering and Science, Hyderabad, Telangana</p>
+                <p>2023 - Present</p>
+                <p>CGPA: 8.54</p>
               </div>
             </div>
           </div>
@@ -102,7 +120,7 @@ const About = () => {
               <span className="info-label variable">double</span>
               <span className="info-label">cgpa</span>
               <span className="info-value">=</span>
-              <span className="info-value number">8.46</span>
+              <span className="info-value number">8.54</span>
               <span className="info-value">;</span>
             </div>
             <div className="info-item indent-1">

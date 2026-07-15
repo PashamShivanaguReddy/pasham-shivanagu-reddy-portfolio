@@ -5,20 +5,19 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          <div className="logo">Shiva<span>Reddy</span></div>
+          <div className="logo">Pasham<span>.</span></div>
           <div className="social-links">
-            <a href="https://www.linkedin.com/in/pasham-shivanagu-reddy-95725b2a5/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/pasham-shivanagu-reddy-95725b2a5/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/PashamShivanaguReddy" target="_blank" rel="noopener noreferrer">
+            <a href="https://leetcode.com/u/shivapasham55/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+              <img className="social-icon-img" src="https://cdn.simpleicons.org/leetcode/F89F1B" alt="LeetCode" />
+            </a>
+            <a href="https://github.com/PashamShivanaguReddy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <i className="fab fa-github"></i>
             </a>
-            <a href="shivapasham55@gmail.com" target="_blank" rel="noopener noreferrer">
+            <a href="mailto:shivapasham55@gmail.com" aria-label="Email">
               <i className="fas fa-envelope"></i>
-            </a>
-            
-            <a href="https://www.instagram.com/shiva_nagureddy/" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i>
             </a>
           </div>
         </div>

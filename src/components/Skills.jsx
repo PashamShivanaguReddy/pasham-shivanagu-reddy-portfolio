@@ -2,15 +2,18 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const Skills = () => {
   const [counts, setCounts] = useState({
-    hackathons: 0,
     leetcode: 0,
-    projects: 0
+    hackathons: 0,
+    certifications: 0,
+    openSource: 0
   });
   
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
+    const observedSection = sectionRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -20,13 +23,13 @@ const Skills = () => {
       { threshold: 0.3 }
     );
     
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (observedSection) {
+      observer.observe(observedSection);
     }
     
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (observedSection) {
+        observer.unobserve(observedSection);
       }
     };
   }, []);
@@ -35,17 +38,19 @@ const Skills = () => {
     if (isVisible) {
       const duration = 2000; // ms
       const steps = 60;
+      const incrementLeetcode = 1500 / steps;
       const incrementHackathons = 2 / steps;
-      const incrementLeetcode = 120 / steps;
-      const incrementProjects = 5 / steps;
+      const incrementCertifications = 4 / steps;
+      const incrementOpenSource = 1 / steps;
       
       let currentStep = 0;
       const timer = setInterval(() => {
         currentStep += 1;
         setCounts({
+          leetcode: Math.min(1500, Math.round(incrementLeetcode * currentStep)),
           hackathons: Math.min(2, Math.round(incrementHackathons * currentStep)),
-          leetcode: Math.min(120, Math.round(incrementLeetcode * currentStep)),
-          projects: Math.min(4, Math.round(incrementProjects * currentStep))
+          certifications: Math.min(4, Math.round(incrementCertifications * currentStep)),
+          openSource: Math.min(1, Math.round(incrementOpenSource * currentStep))
         });
         
         if (currentStep >= steps) {
@@ -65,38 +70,42 @@ const Skills = () => {
         { name: "CSS3", level: 85, icon: "fab fa-css3-alt" },
         { name: "JavaScript", level: 80, icon: "fab fa-js-square" },
         { name: "React", level: 75, icon: "fab fa-react" },
-        
       ]
     },
     {
-      category: "Backend",
+      category: "Backend & APIs",
       items: [
-        { name: "Spring Boot", level: 70, icon: "fas fa-leaf" },
-        { name: "MySQL", level: 70, icon: "fas fa-database" },
-        { name: "MongoDB", level: 65, icon: "fas fa-envira" },
-        { name: "Restful APIs", level: 60, icon: "fas fa-network-wired" },
-      ]
-    },
-
-    {
-      category: "Programming Languages",
-      items: [
-        { name: "JavaScript", level: 70, icon: "fab fa-node-js" },
-        { name: "Python", level: 70, icon: "fab fa-python" },
-        { name: "Java", level: 85, icon: "fab fa-java" },
-        { name: "C", level: 65, icon: "fas fa-code" }
-        
+        { name: "Spring Boot", level: 85, icon: "fas fa-leaf" },
+        { name: "Spring Security", level: 80, icon: "fas fa-shield-alt" },
+        { name: "Hibernate / JPA", level: 80, icon: "fas fa-database" },
+        { name: "REST APIs", level: 82, icon: "fas fa-network-wired" },
       ]
     },
     {
-      category: "Tools",
+      category: "Languages",
       items: [
-        { name: "Git", level: 75, icon: "fab fa-git-alt" },
-        { name: "GitHub", level: 80, icon: "fab fa-github" },
-        { name: "VS Code", level: 85, icon: "fas fa-code" },
-        {name:"Postman", level:70, icon:"fas fa-rocket" },
-        {name:"Docker", level:60, icon:"fab fa-docker" }
-       
+        { name: "Java", level: 90, icon: "fab fa-java" },
+        { name: "JavaScript", level: 75, icon: "fab fa-node-js" },
+        { name: "SQL", level: 78, icon: "fas fa-database" },
+        { name: "C", level: 65, icon: "fas fa-code" },
+      ]
+    },
+    {
+      category: "Databases & Cloud",
+      items: [
+        { name: "H2 Database", level: 78, icon: "fas fa-database" },
+        { name: "MongoDB", level: 68, icon: "fas fa-leaf" },
+        { name: "PostgreSQL", level: 72, icon: "fas fa-server" },
+        { name: "AWS / Docker", level: 72, icon: "fab fa-aws" },
+      ]
+    },
+    {
+      category: "Tools & Core CS",
+      items: [
+        { name: "Git", level: 80, icon: "fab fa-git-alt" },
+        { name: "GitHub", level: 82, icon: "fab fa-github" },
+        { name: "Postman", level: 76, icon: "fas fa-rocket" },
+        { name: "Maven", level: 74, icon: "fas fa-cube" },
       ]
     }
   ];
@@ -130,29 +139,50 @@ const Skills = () => {
         </div>
         
         <div className="achievements">
-          <h3 className="section-title" style={{ fontSize: '2rem', marginBottom: '20px' }}>Achievements</h3>
+          <h3 className="section-title" style={{ fontSize: '2rem', marginBottom: '20px' }}>Resume Highlights</h3>
           <div className="achievements-grid">
+            <div className="achievement-item">
+              <div className="achievement-icon">
+                <img
+                  className="leetcode-logo"
+                  src="https://cdn.simpleicons.org/leetcode/F89F1B"
+                  alt="LeetCode"
+                />
+              </div>
+              <div className="achievement-number">300+</div>
+              <div className="achievement-label">Problems Solved</div>
+            </div>
+            <div className="achievement-item">
+              <div className="achievement-icon">
+                <img
+                  className="leetcode-logo"
+                  src="https://cdn.simpleicons.org/leetcode/F89F1B"
+                  alt="LeetCode"
+                />
+              </div>
+              <div className="achievement-number">{counts.leetcode}+</div>
+              <div className="achievement-label">LeetCode Rating</div>
+            </div>
             <div className="achievement-item">
               <div className="achievement-icon">
                 <i className="fas fa-trophy"></i>
               </div>
               <div className="achievement-number">{counts.hackathons}</div>
               <div className="achievement-label">Hackathons Participated</div>
-              
             </div>
             <div className="achievement-item">
               <div className="achievement-icon">
-                <i className="fas fa-code"></i>
+                <i className="fas fa-certificate"></i>
               </div>
-              <div className="achievement-number">{counts.leetcode}+</div>
-              <div className="achievement-label">LeetCode Problems Solved</div>
+              <div className="achievement-number">{counts.certifications}</div>
+              <div className="achievement-label">Certifications</div>
             </div>
             <div className="achievement-item">
               <div className="achievement-icon">
-                <i className="fas fa-project-diagram"></i>
+                <i className="fas fa-code-branch"></i>
               </div>
-              <div className="achievement-number">{counts.projects}+</div>
-              <div className="achievement-label">Projects Completed</div>
+              <div className="achievement-number">{counts.openSource}</div>
+              <div className="achievement-label">Open Source Contributions</div>
             </div>
           </div>
         </div>

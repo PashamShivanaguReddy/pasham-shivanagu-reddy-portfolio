@@ -11,10 +11,10 @@ A personal portfolio website showcasing my **projects, skills, education, and ac
 ---
 
 ## 🧰 Tech Stack
-- **Frontend:** React.js  
-- **Styling:** Tailwind CSS  
-- **Animations:** Framer Motion, React Typed, React CountUp  
-- **Deployment:** Vercel / Netlify / GitHub Pages  
+- **Frontend:** React.js
+- **Styling:** Custom CSS
+- **Build Tool:** Create React App
+- **Deployment:** Vercel
 
 ---
 
@@ -58,8 +58,9 @@ pasham-shivanagu-reddy-portfolio/
 - Skill logos with hover animations.  
 - **Achievements counters** (animated count-up when visible):  
   - Hackathons → 2  
-  - LeetCode Problems Solved → 140+  
-  - Certifications → 7+  
+  - LeetCode Problems Solved → 300+  
+  - Certifications → 4+  
+  - Open Source Contributions → 1+  
 
 ---
 

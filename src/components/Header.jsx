@@ -17,15 +17,23 @@ const Header = () => {
         <nav className="navbar">
           <a href="#home" className="logo">Pasham<span>.</span></a>
           
-          <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+          <div className={`nav-links ${isMenuOpen ? 'active' : ''}`} id="primary-navigation">
             <a href="#home" onClick={closeMenu}>Home</a>
             <a href="#about" onClick={closeMenu}>About</a>
+            <a href="#experience" onClick={closeMenu}>Experience</a>
             <a href="#projects" onClick={closeMenu}>Projects</a>
             <a href="#skills" onClick={closeMenu}>Skills</a>
             <a href="#contact" onClick={closeMenu}>Contact</a>
           </div>
           
-          <button className="menu-btn" onClick={toggleMenu}>
+          <button
+            className="menu-btn"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="primary-navigation"
+            onClick={toggleMenu}
+          >
             <i className={isMenuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
           </button>
         </nav>
