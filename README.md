@@ -6,7 +6,7 @@ A personal portfolio website showcasing my **projects, skills, education, and ac
 ---
 
 ## 🚀 Live Demo
-👉 https://pasham-shivanagu-reddy-portfolio-1i.vercel.app/#projects
+👉 https://pasham-shivanagu-reddy-portfolio.vercel.app/
 
 ---
 
